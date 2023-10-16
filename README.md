@@ -1,2 +1,6 @@
-# web-425
-Repository for assigments from Bellevue University's WEB 425 course
+# WEB 425 Angular With TypeScript
+## Contributors
+<ul>
+  <li>Kyle Hochdoerfer</li>
+  <li>Richard Krasso</li>
+</ul>

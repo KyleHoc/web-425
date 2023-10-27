@@ -1,3 +1,11 @@
+<!--
+Author: Kyle Hochdoerfer
+Title: app.component.html
+Date: 10/24/23
+Description: HTML page for the main app component
+-->
+
+<!--Display a navbar with Home, About and Contact options -->
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <ul class="navbar-nav">
     <li class="nav-item active">
@@ -12,23 +20,28 @@
   </ul>
 </nav>
 
+<!--Display a main container that lists the assignment name-->
 <div role="main" class="container">
   <br /><br />
 
   <h2>{{assignment}}</h2>
 
   <br /><br />
+  <!--Show an error if the user is not logged in -->
   <div class="row" *ngIf="isLoggedIn; else showError">
     <div class="col-sm-6">
+      <!--If the user is logged in, display their image -->
       <app-my-image></app-my-image>
     </div>
 
     <div class="col-sm-6 my-auto">
+      <!--If the user is logged in, display their details-->
       <app-my-details></app-my-details>
     </div>
 
   </div>
 
+  <!--Show the following error message if the user is not logged in-->
   <ng-template #showError>
     <div class="row">
       <div class="col-sm-12">

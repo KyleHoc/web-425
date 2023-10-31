@@ -1,0 +1,31 @@
+<!--
+Author: Kyle Hochdoerfer
+Title: signin.component.html
+Date: 10/30/23
+Description: HTML page for the signin component
+-->
+
+<!--Create a card to hold the form as a container with a title-->
+<div class="card signin-container">
+  <div class="card-body">
+    <h3 class="card-title">Sign in</h3>
+    <form class="card-text">
+      <!--Form group for username input-->
+      <div class="form-group mb-4">
+        <label for="txtUserName">Username</label>
+        <input type="text" class="form-control" id="txtUserName" placeholder="Enter username" />
+      </div>
+
+      <!--Form group for username input-->
+      <div class="form-group">
+        <label for="txtPassword">Password</label>
+        <input type="password" class="form-control" id="txtPassword" placeholder="Enter your password" />
+      </div>
+
+      <!--Form group for submit button-->
+      <div class="form-group">
+        <button class="btn btn-primary float-end mt-lg-3" (click)="signin()">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>

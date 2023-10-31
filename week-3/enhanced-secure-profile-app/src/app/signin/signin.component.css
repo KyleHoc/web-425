@@ -1,0 +1,10 @@
+/*Author: Kyle Hochdoerfer
+Title: signin.component.css
+Date: 10/30/23
+Description: CSS for signin component of secure profile app*/
+
+.signin-container {
+  width: 35%;
+  margin: 0 auto;
+  margin-top: 10%;
+}

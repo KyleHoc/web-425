@@ -19,5 +19,5 @@ export class AppComponent {
   isLoggedIn: boolean = true;
 
   //Declare a variable to hold the assignment name
-  assignment = 'Exercise 2.3: Data Binding';
+  assignment = 'Assignment 3.4: Guarding Routes';
 }

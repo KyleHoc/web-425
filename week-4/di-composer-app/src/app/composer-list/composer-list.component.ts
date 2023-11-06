@@ -3,11 +3,10 @@
 //Date: 10/25/23
 //Description: Typescript composer list component
 
-//Import component, IComposer, the Composer class and oninit from angular
+//Import component, IComposer, and oninit from angular
 import { Component, OnInit } from '@angular/core';
 import { IComposer } from '../composer.interface';
-import { Composer } from '../composer.class';
-
+import { ComposerService } from '../composer.service';
 
 //Create and export a component for composer-list
 @Component({
@@ -21,9 +20,9 @@ export class ComposerListComponent implements OnInit {
   composers: Array<IComposer>
 
   //Create a constructor for the component
-  constructor() {
+  constructor(private composerService: ComposerService) {
       //Set the composer array to equal the value returned by getComposers
-      this.composers = new Composer().getComposers();
+      this.composers = this.composerService.getComposers()
    }
 
   ngOnInit(): void {

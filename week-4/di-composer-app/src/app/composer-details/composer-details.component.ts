@@ -3,10 +3,10 @@
 //Date: 10/30/23
 //Description: Typescript composer details component
 
-//Import Component, OnInit, IComposer, Composer, and Activated Route
+//Import Component, OnInit, IComposer, Composer Service, and Activated Route
 import { Component, OnInit } from '@angular/core';
 import { IComposer } from '../composer.interface';
-import { Composer } from '../composer.class';
+import { ComposerService } from '../composer.service';
 import { ActivatedRoute } from '@angular/router';
 
 //Create a composer details component
@@ -23,14 +23,14 @@ export class ComposerDetailsComponent implements OnInit {
   composer: IComposer;
 
   //Create a constructor with a route passed into its parameters
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute, private ComposerService: ComposerService) {
     //Access the composer ID selected when the user navigates to a composer details page
     this.composerId = parseInt(this.route.snapshot.paramMap.get('composerId'), 10);
 
     //If a composer ID is passed found
     if(this.composerId){
       //Set the selected composer
-      this.composer = new Composer().getComposer(this.composerId)
+      this.composer = this.ComposerService.getComposer(this.composerId)
     }
    }
 

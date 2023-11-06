@@ -3,6 +3,7 @@
 //Date: 10/24/23
 //Description: Typescript for my-details component
 
+//Import Component and OnInit from Angular
 import { Component, OnInit } from '@angular/core';
 
 //Export and declare a Person class

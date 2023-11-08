@@ -12,10 +12,12 @@ import { SignInGuard } from "./sign-in.guard";
 //Add routes for home and the sign-in component
 export const AppRoutes: Routes = [
   {
+    //Set default route to sign-in component
     path: '',
     component: SigninComponent
   },
   {
+    //Create route to home component that activates signin guard
     path: 'home',
     component: HomeComponent,
     canActivate: [SignInGuard]

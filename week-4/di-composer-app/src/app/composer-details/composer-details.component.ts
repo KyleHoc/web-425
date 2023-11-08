@@ -27,9 +27,9 @@ export class ComposerDetailsComponent implements OnInit {
     //Access the composer ID selected when the user navigates to a composer details page
     this.composerId = parseInt(this.route.snapshot.paramMap.get('composerId'), 10);
 
-    //If a composer ID is passed found
+    //If the passed in composer ID is found
     if(this.composerId){
-      //Set the selected composer
+      //Set this.composer to contain that composer's info using getComposer
       this.composer = this.ComposerService.getComposer(this.composerId)
     }
    }

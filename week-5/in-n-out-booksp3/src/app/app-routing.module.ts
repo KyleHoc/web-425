@@ -10,21 +10,25 @@ import { BookListComponent } from './book-list/book-list.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 
-//Create routes for book list, contact, and about components, with booklist as the default
+//Create routes for the in-n-out-books app
 const routes: Routes = [
   {
+    //Set book-list as the default route
     path: '',
     component: BookListComponent
   },
   {
+    //Create the non-default book list component route
     path: 'book-list',
     component: BookListComponent
   },
   {
+    //Create the contact component route
     path: "contact",
     component: ContactComponent
   },
   {
+    //Create the about component route
     path: "about",
     component: AboutComponent
   }

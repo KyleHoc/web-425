@@ -19,6 +19,6 @@ export class AppComponent {
 
   //Initialize the assignment title variable with a constructor
   constructor(){
-    this.assignment = "Exercise 5.4: Dialogs"
+    this.assignment = "Assignment 5.4: Dialogs"
   }
 }
